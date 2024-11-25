@@ -1,0 +1,29 @@
+services:
+  nginx:
+    image: nginx:stable-alpine3.20-perl
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    networks:
+      - nginx-networks
+    ports:
+      - "9000:9000"
+  map_api:
+    build:
+      context: ./MapApi
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    networks:
+      - nginx-networks
+  auth_api:
+    build:
+      context: ./api-pothoiz
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - nginx-networks
+
+networks:
+  nginx-networks:
+    driver: bridge
