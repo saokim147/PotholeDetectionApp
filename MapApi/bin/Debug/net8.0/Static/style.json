@@ -7,10 +7,10 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://192.168.1.2:7087/static/tileset.json"
+      "url": "http://207.148.100.152:5000/static/tileset.json"
     }
   },
-  "sprites": "https://192.168.1.2:7087/static/sprite.json",
+  "sprites": "http://207.148.100.152:5000/static/sprite.json",
   "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=h7xaImFYg2SjpQZ5dNdU",
   "layers": [
     {
