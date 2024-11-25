@@ -19,7 +19,7 @@ builder.Configuration.AddEnvironmentVariables();
 builder.Services.AddSingleton(
     sp =>
     {
-        var path = builder.Configuration["MBTilesPath"] ?? string.Empty;
+        var path = "./Static/osm.mbtiles";
         return new MBTileProvider(path);
     }
 );
@@ -33,7 +33,7 @@ app.UseStaticFiles(new StaticFileOptions
     FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Static")),
     RequestPath = "/static"
 });
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => "Map Checkpoint");
 app.MapGet("/tiles/{z}/{x}/{y}.pbf", (int z, int x, int y, MBTileProvider provider, HttpContext context) =>
 {
     var data = provider.GetTiles(z, x, y);

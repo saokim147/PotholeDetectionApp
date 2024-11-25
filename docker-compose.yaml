@@ -11,13 +11,15 @@ services:
     build:
       context: ./MapApi
       dockerfile: Dockerfile
+    volumes:
+      - ./MapApi/Static/:/app/Static
     ports:
       - "5000:5000"
     networks:
       - nginx-networks
   auth_api:
     build:
-      context: ./api-pothoiz
+      context: ./AuthApi
       dockerfile: Dockerfile
     ports:
       - "8080:8080"

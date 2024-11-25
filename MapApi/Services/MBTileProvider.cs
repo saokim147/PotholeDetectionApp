@@ -23,7 +23,7 @@ namespace MapApi.Services
             ConnectionString = new SqliteConnectionStringBuilder
             {
                 DataSource = path,
-                Mode = SqliteOpenMode.ReadOnly,
+                Mode = SqliteOpenMode.ReadWriteCreate,
                 Cache = SqliteCacheMode.Shared
             }.ToString();
             LoadMetadata();

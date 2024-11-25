@@ -120,3 +120,4 @@ C:\Users\thinh\OneDrive\Desktop\production\MapApi\obj\Debug\net8.0\refint\MapApi
 C:\Users\thinh\OneDrive\Desktop\production\MapApi\obj\Debug\net8.0\MapApi.pdb
 C:\Users\thinh\OneDrive\Desktop\production\MapApi\obj\Debug\net8.0\MapApi.genruntimeconfig.cache
 C:\Users\thinh\OneDrive\Desktop\production\MapApi\obj\Debug\net8.0\ref\MapApi.dll
+C:\Users\thinh\OneDrive\Desktop\production\MapApi\obj\Debug\net8.0\MapApi.sourcelink.json
