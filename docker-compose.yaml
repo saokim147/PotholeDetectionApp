@@ -14,9 +14,10 @@ services:
     volumes:
       - ./MapApi/Static/:/app/Static
     ports:
-      - "5000:5000"
+      - "5100:5100"
     networks:
       - nginx-networks
+    user: "0:0"
   auth_api:
     build:
       context: ./AuthApi
