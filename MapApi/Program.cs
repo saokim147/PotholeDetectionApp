@@ -43,21 +43,19 @@ app.MapGet("/tiles/{z}/{x}/{y}.pbf", (int z, int x, int y, MBTileProvider provid
     context.Response.Headers.ContentEncoding = "gzip";
     return Results.File(data, "application/x-protobuf",$"{z}.pbf");
 });
-app.MapGet("/Map/{fontstack}/{range:regex(^[[\\d]]+-[[\\d]]+$)}.pbf", async (HttpContext context, string fontstack, string range) =>
+app.MapGet("/font/{fontstack}/{range:regex(^\\d+-\\d+$)}.pbf", async (HttpContext context, string fontstack, string range) =>
 {
     fontstack = Uri.UnescapeDataString(fontstack);
     var rootPath = Path.Combine(Directory.GetCurrentDirectory(),"Static","font");
     var fileName = Path.Combine(rootPath, fontstack, $"{range}.pbf");
-
+    app.Logger.LogInformation("Requesting font file: {0}", fileName);
     if (!File.Exists(fileName))
     {
         return Results.NotFound("Font not found");
     }
 
     var data = await File.ReadAllBytesAsync(fileName);
-
     context.Response.Headers.LastModified= DateTime.UtcNow.ToString("R"); // RFC1123 format
-
     return Results.File(data, "application/x-protobuf", $"{fontstack}-{range}.pbf");
 });
 

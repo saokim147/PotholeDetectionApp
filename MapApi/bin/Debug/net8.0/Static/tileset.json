@@ -1,6 +1,6 @@
 {
   "tiles": [
-    "https://207.148.100.152:9000/map/tiles/{z}/{x}/{y}.pbf"
+    "http://207.148.100.152:9000/map/tiles/{z}/{x}/{y}.pbf"
   ],
   "name": "OpenMapTiles",
   "format": "pbf",

@@ -11,7 +11,7 @@
     }
   },
   "sprites": "http://207.148.100.152:9000/map/static/sprite.json",
-  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=h7xaImFYg2SjpQZ5dNdU",
+  "glyphs": "http://207.148.100.152:9000/map/font/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
