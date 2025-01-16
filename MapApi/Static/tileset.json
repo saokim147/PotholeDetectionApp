@@ -1,13 +1,22 @@
 {
   "tiles": [
-    "http://207.148.100.152:9000/map/tiles/{z}/{x}/{y}.pbf"
+    "https://netforever.cfd/map/tiles/{z}/{x}/{y}.pbf"
   ],
   "name": "OpenMapTiles",
   "format": "pbf",
   "basename": "vietnam_ho-chi-minh-city.mbtiles",
   "id": "openmaptiles",
-  "bounds": [ 106.458, 10.611, 106.949, 11.021 ],
-  "center": [ 106.7035, 10.816, 14 ],
+  "bounds": [
+    106.458,
+    10.611,
+    106.949,
+    11.021
+  ],
+  "center": [
+    106.7035,
+    10.816,
+    14
+  ],
   "description": "Region Ho Chi Minh City extract from https://openmaptiles.com",
   "maxzoom": 14,
   "minzoom": 0,
